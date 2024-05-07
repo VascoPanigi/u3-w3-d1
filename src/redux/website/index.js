@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import favoriteCompanyReducer from "../reducers";
+import favouriteCompanyReducer from "../reducers";
 
 const store = configureStore({
-  reducer: favoriteCompanyReducer,
+  reducer: favouriteCompanyReducer,
 });
 
 export default store;

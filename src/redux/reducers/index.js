@@ -1,26 +1,26 @@
 const initialState = {
-  favoriteCompany: {
+  favouriteCompany: {
     content: [],
   },
 };
 
-const favoriteCompanyReducer = (state = initialState, action) => {
+const favouriteCompanyReducer = (state = initialState, action) => {
   switch (action.type) {
     case "ADD_TO_FAVOURITES":
       return {
         ...state,
-        favoriteCompany: {
-          ...state.favoriteCompany,
-          content: state.favoriteCompany.concat(action.payload),
+        favouriteCompany: {
+          ...state.favouriteCompany,
+          content: state.favouriteCompany.content.concat(action.payload),
         },
       };
 
     case "REMOVE_FROM_FAVOURITES":
       return {
         ...state,
-        favoriteCompany: {
-          ...state.favoriteCompany,
-          content: state.favoriteCompany.content.filter((company) => company !== action.payload),
+        favouriteCompany: {
+          ...state.favouriteCompany,
+          content: state.favouriteCompany.content.filter((company) => company !== action.payload),
         },
       };
 
@@ -29,4 +29,4 @@ const favoriteCompanyReducer = (state = initialState, action) => {
   }
 };
 
-export default favoriteCompanyReducer;
+export default favouriteCompanyReducer;
